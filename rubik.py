@@ -191,9 +191,11 @@ class Cube:
     #             avg = sum(right)/len(right)
     #             print(f"RIGHT {avg:.02f} nanoseconds")
 
-m = Cube()
-while True:
-    os.system('cls')
-    print(m)
-    sequence = input(">>> ")
-    m.move(sequence)
+
+if __name__ == '__main__':
+    m = Cube()
+    while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(m)
+        sequence = input(">>> ")
+        m.move(sequence)
