@@ -8,6 +8,7 @@ from collections import deque
 import numpy as np
 
 class Cube:
+
     def __init__(self):
         
         self.grid = np.zeros((9,12), dtype=int)
@@ -125,6 +126,7 @@ class Cube:
         else:
             self.grid[np.ix_([3,4,5],[0,1,2])] = np.rot90(self.grid[np.ix_([3,4,5],[0,1,2])])
             self.grid[0,6:9], self.grid[3:6,11], self.grid[8,6:9], self.grid[3:6,3] = self.grid[3:6,11], self.grid[8,6:9], self.grid[3:6,3], self.grid[0,6:9].copy()
+
     def move(self, alg):
 
         moves = alg.split()
